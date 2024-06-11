@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+const comps = await getCollection("comps");
+console.log(comps)
+import Components from "./comps/components.astro";
+---
+
+<Layout title="Custom Design">
+	<div class="text-white">
+		<h1 class="text-3xl">Design System</h1>
+		<p>
+			The components will be styled with Tailwind using classes, so you
+			simply have to copy and paste.
+		</p>
+		<div>
+			<button class=""></button>
+		</div>
+	</div>
+	<Components/>
+</Layout>

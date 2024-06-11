@@ -1,0 +1,21 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+export const getStaticPaths = (async () => {
+    const comps = await getCollection("comps");
+    return comps.map((post) => ({ params: { slug: post.slug }, props: post }));
+}) satisfies GetStaticPaths;
+
+
+export const prerender = true;
+
+const {
+    body,
+    data: { image, title, price, size },
+} = Astro.props;
+---
+
+<Layout title={title}>
+    <h1 class="text-white">{title}</h1>
+</Layout>

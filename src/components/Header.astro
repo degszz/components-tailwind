@@ -1,0 +1,37 @@
+---
+import Menu from "../components/Menu.astro";
+
+---
+
+<header
+    class="z-[1000] fixed top-0 border-b-2 text-white-950 h-[51px] md:h-[65px] w-full flex items-center justify-between "
+>
+    <div
+        class="flex px-1 items-center justify-center min-w-[100px] text-center h-full"
+    >
+        <Menu />
+    </div>
+    <div class="flex w-full h-full justify-end items-center">
+        <div>
+            
+        </div>
+    </div>
+    <div
+        class="flex px-1 items-center justify-center min-w-[100px] text-center h-full"
+    >
+    </div>
+</header>
+<script>
+    window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("abajo", window.scrollY > 0);
+    });
+</script>
+<style>
+    header {
+        background: transparent;
+    }
+    header.abajo {
+        background-color: #000;
+    }
+</style>

@@ -1,0 +1,11 @@
+---
+import Component from "../../components/Component.astro";
+import { getCollection } from "astro:content";
+const comps = await getCollection("comps");
+---
+
+<ul
+    class="bg-black w-full h-fit md:h-fit grid grid-cols-2 md:grid-cols-3 place-items-center"
+>
+    {comps.map((comp) => <Component {...comp.data} slug={comp.slug}/>)}
+</ul>
