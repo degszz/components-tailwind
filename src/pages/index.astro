@@ -1,9 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { getCollection } from "astro:content";
-const comps = await getCollection("comps");
-console.log(comps)
-import Components from "./comps/components.astro";
+import Carousel from "../components/componentes/Carousel.astro";
 ---
 
 <Layout title="Custom Design">
@@ -17,5 +14,5 @@ import Components from "./comps/components.astro";
 			<button class=""></button>
 		</div>
 	</div>
-	<Components/>
+	<Carousel/>
 </Layout>

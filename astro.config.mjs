@@ -1,10 +1,11 @@
 import { defineConfig } from 'astro/config';
-
 import tailwind from "@astrojs/tailwind";
+
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
+  integrations: [tailwind(), react()],
   markdown: {
     shikiConfig: {
       // Choose from Shiki's built-in themes (or add your own)
@@ -14,7 +15,7 @@ export default defineConfig({
       // See note below for using dual light/dark themes
       themes: {
         light: 'dracula',
-        dark: 'dracula',
+        dark: 'dracula'
       },
       // Add custom languages
       // Note: Shiki has countless langs built-in, including .astro!
@@ -24,7 +25,7 @@ export default defineConfig({
       wrap: true,
       // Add custom transformers: https://shiki.style/guide/transformers
       // Find common transformers: https://shiki.style/packages/transformers
-      transformers: [],
-    },
-  },
+      transformers: []
+    }
+  }
 });

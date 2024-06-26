@@ -1,0 +1,29 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Code } from "astro:components";
+import Button from "../../components/componentes/Button.astro";
+---
+
+<Layout title="Button">
+    <h1 class="text-white text-2xl">Button</h1>
+    <p class="text-white text-md">This is a button.</p>
+    <Button />
+    <Code
+        class="max-w-fit p-2 border-2"
+        code={`<button class="bg-orange-300 
+    mr-2 mb-2 px-2.5 py-1.5 
+    text-black font-medium text-center 
+    justify-center inline-flex items-center flex-row 
+    rounded-lg border gap-x-2 opacity-90
+    cursor-pointer hover:bg-orange-500 hover:text-white 
+    hover:opacity-100 hover:bg-black-600 
+    hover:scale-110 hover:shadow-lg 
+    dark:focus:ring-black-300 
+    focus:ring-2 focus:outline-none focus:ring-black-30 
+    transition-all duration-200 ease-in-out scale-90">
+    Button
+</button>`}
+        lang="astro"
+        theme="dark-plus"
+    />
+</Layout>
