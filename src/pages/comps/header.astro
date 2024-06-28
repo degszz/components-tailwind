@@ -9,8 +9,46 @@ import Header from "../../components/componentes/Header.astro";
     <p class="text-white text-md">This is a Header.</p>
     <Header />
     <Code
-        class="max-w-fit p-2 border-2"
-        code={``}
+        class="max-w-2xl p-2 border-2 rounded-2xl my-4"
+        code={`<!-- fixed top-0 w-full-->
+<header
+class="z-[1000] text-white border-b-2
+text-white-950 h-[51px] md:h-[65px] 
+w-[500px] flex items-center justify-between "
+>
+    <div
+        class="flex px-1 items-center justify-center
+         min-w-[100px] text-center h-full"
+    >
+        LEFT
+    </div>
+    <div class="flex w-full h-full justify-center items-center">
+        <div>
+            CENTER
+        </div>
+    </div>
+    <div
+        class="flex px-1 items-center justify-center
+         min-w-[100px] text-center h-full"
+    >
+        RIGHT
+    </div>
+</header>
+<script>
+    window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("abajo", window.scrollY > 0);
+    });
+</script>
+<style>
+    header {
+        background: transparent;
+    }
+    header.abajo {
+        background-color: #000;
+    }
+</style>
+`}
         lang="astro"
         theme="dark-plus"
     />

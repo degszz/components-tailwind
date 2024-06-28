@@ -1,16 +1,17 @@
 ---
-import Layout from "../../layouts/Layout.astro"
+import Layout from "../../layouts/Layout.astro";
 import Accordion from "../../components/componentes/Accordion.astro";
 import { Code } from "astro:components";
 ---
 
 <Layout title="Accordion">
-    <h1 class="text-white text-2xl">Accordion</h1>
-    <p class="text-white text-md">This is a Accordion.</p>
-    <Accordion/>
-    <Code
-        class="max-w-fit p-2 border-2"
-        code={`<div
+    <div class="">
+        <h1 class="text-white text-3xl"><b>Accordion</b></h1>
+        <p class="text-white text-md">This is a Accordion.</p>
+        <Accordion />
+        <Code
+            class="max-w-fit p-2 border-2 rounded-2xl my-4"
+            code={`<div
     x-data="{ reportsOpen: false }"
 >
     <div
@@ -70,7 +71,8 @@ import { Code } from "astro:components";
 </div>
 <script src="https://unpkg.com/alpinejs" defer></script>
 `}
-        lang="astro"
-        theme="dark-plus"
-    />
+            lang="astro"
+            theme="dark-plus"
+        />
+    </div>
 </Layout>
