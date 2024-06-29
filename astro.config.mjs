@@ -1,11 +1,13 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
-
 import react from "@astrojs/react";
+import db from "@astrojs/db";
+
+import vercel from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), react()],
+  integrations: [tailwind(), react(), db()],
   markdown: {
     shikiConfig: {
       // Choose from Shiki's built-in themes (or add your own)
@@ -27,5 +29,7 @@ export default defineConfig({
       // Find common transformers: https://shiki.style/packages/transformers
       transformers: []
     }
-  }
+  },
+  output: "server",
+  adapter: vercel()
 });
