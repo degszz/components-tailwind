@@ -25,14 +25,14 @@ if (Astro.request.method === "POST") {
 
 <Layout title="Contact Me">
     <div
-        class="w-full h-custom--calc md:h-custom-calc flex md:flex-row md:items-center md:justify-between"
+        class="w-full h-custom--calc md:h-custom-calc flex items-center md:flex-row md:items-center md:justify-between"
     >
-        <div class="w-[300px]">
+        <div class="">
             <div class="css-peeps"></div>
         </div>
-
+        <div></div>
         <div
-            class="bg-white dark:bg-black shadow-md rounded-lg px-8 py-6 h-fit w-[300px] animate-shake animate-once"
+            class="bg-white dark:bg-black shadow-md rounded-lg md:ml-8 px-8 py-6 h-fit w-[300px] animate-shake animate-once"
         >
             <h1 class="text-2xl font-bold mb-1 dark:text-gray-200">
                 Contact Me!
@@ -182,7 +182,7 @@ if (Astro.request.method === "POST") {
             height: 150px;
         }
     }
-    @media (max-height: 530px) {
+    @media (max-width: 530px) {
         .css-peeps {
             display: none;
         }

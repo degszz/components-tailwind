@@ -5,19 +5,48 @@ import { Code } from "astro:components";
 ---
 
 <Layout title="Accordion">
-    <div class="">
-        <h1 class="text-white text-3xl"><b>Accordion</b></h1>
-        <p class="text-white text-md">This is a Accordion.</p>
-        <Accordion />
-        <Code
-            class="max-w-fit p-2 border-2 rounded-2xl my-4"
-            code={`<div
-    x-data="{ reportsOpen: false }"
->
-    <div
-        class="w-full max-w-lg px-10 py-8 mx-auto
-        bg-white rounded-lg shadow-xl"
-    >
+    <div class="w-[430px] sm:w-[500px] md:w-full">
+        <div class="my-4 text-center md:text-start">
+            <h1 class="text-3xl text-black dark:text-white">
+                <b>Accordion</b>
+            </h1>
+            <div class="flex justify-center items-center md:justify-start">
+                <p
+                    class="text-md max-w-[300px] md:max-w-[650px] text-black dark:text-white"
+                >
+                    This is the <b>Accordion</b> to place text below when clicking.
+                </p>
+            </div>
+        </div>
+        <div class="flex flex-col justify-center items-center">
+            <Accordion />
+        </div>
+        <div class="flex flex-col items-center justify-center my-6">
+            <div
+                class="bg-[#1E1E1E] py-2 w-[350px] md:w-full border-b-1 border-2 rounded-t-2xl"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-code text-white ml-3"
+                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                    ></path><path d="M7 8l-4 4l4 4"></path><path
+                        d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"
+                    ></path></svg
+                >
+            </div>
+            <Code
+                class="w-[350px] md:w-full p-2 border-2 border-t-0 "
+                code={`<div x-data="{ reportsOpen: false }">
+        <div class="w-full max-w-lg px-10 py-8 mx-auto
+        bg-white rounded-lg shadow-xl">
         <div class="max-w-md mx-auto space-y-6">
             <h1 class="text-2xl text-black"><b>Accordion</b></h1>
             <p class="text-gray-600"></p>
@@ -25,13 +54,11 @@ import { Code } from "astro:components";
             <div
                 @click="reportsOpen = !reportsOpen"
                 class="flex items-center text-gray-600 w-full
-                border-b overflow-hidden mt-32 md:mt-0 mb-5 mx-auto"
-            >
+                border-b overflow-hidden mt-32 md:mt-0 mb-5 mx-auto">
                 <div
                     class="w-10 border-r px-2 transform 
                     transition duration-300 ease-in-out"
-                    :class="{'rotate-90': reportsOpen,' -translate-y-0.0': !reportsOpen }"
-                >
+                    :class="{'rotate-90': reportsOpen,' -translate-y-0.0': !reportsOpen }">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -71,8 +98,9 @@ import { Code } from "astro:components";
 </div>
 <script src="https://unpkg.com/alpinejs" defer></script>
 `}
-            lang="astro"
-            theme="dark-plus"
-        />
+                lang="astro"
+                theme="dark-plus"
+            />
+        </div>
     </div>
 </Layout>

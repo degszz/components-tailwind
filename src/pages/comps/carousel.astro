@@ -1,0 +1,78 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Code } from "astro:components";
+import Carousel from "../../components/componentes/Carousel.astro";
+---
+
+<Layout title="Carousel">
+    <div class="w-[430px] sm:w-[500px] md:w-full ">
+        <div class="text-center md:text-start my-4">
+            <h1 class="text-3xl text-black dark:text-white">
+                <b>Carousel</b>
+            </h1>
+            <div class="flex justify-center items-center md:justify-start">
+                <p class="text-md max-w-[400px] md:max-w-[650px] text-black dark:text-white">
+                    This is a <b>Carousel</b> to put images, information or components to
+                    display in a linear manner.
+                </p>
+            </div>
+        </div>
+        <Carousel />
+        <div class="flex flex-col items-center justify-center my-6">
+            <div class="bg-[#1E1E1E] py-2 w-[350px] md:w-full border-b-1 border-2 rounded-t-2xl">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-code text-white ml-3"
+                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                        d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"
+                    ></path><path d="M14 4l-4 16"></path></svg
+                >
+            </div>
+            <Code
+                class="w-[350px] md:w-full p-2 border-2 border-t-0"
+                code={`<div class="h-[300px] w-full overflow-hidden flex flex-nowrap text-center" id="slider">
+                    <div class="bg-blue-600 text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+                        <h2 class="text-4xl max-w-md">#1</h2>
+                        <p class="max-w-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio deserunt quam repudiandae dolorem neque non, amet nulla incidunt quo porro quisquam numquam in aspernatur, obcaecati suscipit similique? Dolorem, delectus eaque?</p>
+                    </div>
+                    <div class="bg-pink-400 text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+                        <h2 class="text-4xl max-w-md">#2</h2>
+                        <p class="max-w-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio deserunt quam repudiandae dolorem neque non, amet nulla incidunt quo porro quisquam numquam in aspernatur, obcaecati suscipit similique? Dolorem, delectus eaque?</p>
+                    </div>
+                    <div class="bg-teal-500 text-white space-y-4 flex-none w-full flex flex-col items-center justify-center">
+                        <h2 class="text-4xl max-w-md">#3</h2>
+                        <p class="max-w-md">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus perspiciatis quia in ullam tempore esse exercitationem, soluta ipsa debitis impedit vero cum laborum quidem quasi consectetur amet, at, repudiandae ea!</p>
+                    </div>
+                </div>
+                <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const slider = document.querySelector('#slider');
+                    setTimeout(function moveSlide() {
+                        const max = slider.scrollWidth - slider.clientWidth;
+                        const left = slider.clientWidth;
+                
+                        if (max === slider.scrollLeft) {
+                            slider.scrollTo({left: 0, behavior: 'smooth'})
+                        } else {
+                            slider.scrollBy({left, behavior: 'smooth'})
+                        }
+                
+                        setTimeout(moveSlide, 2000)
+                    }, 2000)
+                
+                })
+                </script>`}
+                lang="astro"
+                theme="dark-plus"
+            />
+        </div>
+    </div>
+</Layout>

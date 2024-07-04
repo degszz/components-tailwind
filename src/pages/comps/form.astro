@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Code } from "astro:components";
+import Form from "../../components/componentes/Form.astro";
+---
+
+<Layout title="Form">
+    <div class="w-[430px] sm:w-[500px] md:w-full">
+        <div class="my-4 text-center md:text-start">
+            <h1 class="text-3xl text-black dark:text-white">
+                <b>Form</b>
+            </h1>
+            <div class="flex justify-center items-center md:justify-start">
+                <p
+                    class="text-md max-w-[400px] md:max-w-[650px] text-black dark:text-white"
+                >
+                    This is a <b>Form</b> with method POST, to send the response to a database made with Astro DB.
+                </p>
+            </div>
+        </div>
+        <Form />
+        <div class="flex flex-col items-center justify-center my-6">
+            <div
+                class="bg-[#1E1E1E] py-2 w-[350px] md:w-full border-b-1 border-2 rounded-t-2xl"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-code text-white ml-3"
+                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                    ></path><path d="M7 8l-4 4l4 4"></path><path
+                        d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"
+                    ></path></svg
+                >
+            </div>
+            <Code
+                class="w-[350px] md:w-full p-2 border-2 border-t-0"
+                code={`<div class=" flex items-center justify-center
+             w-full dark:bg-gray-950"
+            >
+        <div class="bg-white dark:bg-gray-900 
+        shadow-md rounded-lg px-8 py-6 max-w-md"
+        >
+            <h1 class="text-2xl font-bold text-center
+             mb-4 dark:text-gray-200">
+                Welcome Back!
+             </h1>
+            <form action="#">
+                <div class="mb-4">
+                    <label for="email" class="block text-sm
+                     font-medium text-gray-700 dark:text-gray-300
+                      mb-2">Email Address</label>
+                    <input type="email" id="email" class="shadow-sm
+                    rounded-md w-full px-3 py-2 border border-gray-300
+                    focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                     placeholder="your@email.com" required>
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium
+                     text-gray-700 dark:text-gray-300 mb-2">
+                        Password
+                    </label>
+                    <input type="password" id="password" 
+                    class="shadow-sm rounded-md w-full px-3 py-2 border
+                    border-gray-300 focus:outline-none focus:ring-indigo-500
+                    focus:border-indigo-500" placeholder="Enter your password" 
+                    required>
+                    <a href="#"
+                        class="text-xs text-gray-600 hover:text-indigo-500 
+                        focus:outline-none focus:ring-2 focus:ring-offset-2
+                        focus:ring-indigo-500">
+                            Forgot Password?
+                        </a>
+                </div>
+                <div class="flex items-center justify-between mb-4">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="remember" 
+                        class="h-4 w-4 rounded border-gray-300 text-indigo-600
+                         focus:ring-indigo-500 focus:outline-none" checked>
+                        <label for="remember" class="ml-2 block text-sm text-gray-700
+                         dark:text-gray-300">Remember me</label>
+                    </div>
+                    <a href="#"
+                        class="text-xs text-indigo-500 hover:text-indigo-700
+                        focus:outline-none focus:ring-2 focus:ring-offset-2
+                        focus:ring-indigo-500">
+                        Create Account
+                    </a>
+                </div>
+                <button  type="submit" class="w-full flex
+                 justify-center py-2 px-4 border border-transparent
+                rounded-md shadow-sm text-sm font-medium text-white
+                bg-indigo-600 hover:bg-indigo-700 focus:outline-none
+                 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Login
+                </button>
+            </form>
+        </div>
+    </div>`}
+                lang="astro"
+                theme="dark-plus"
+            />
+        </div>
+    </div>
+</Layout>

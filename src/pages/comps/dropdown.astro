@@ -4,81 +4,111 @@ import { Code } from "astro:components";
 import DropDown from "../../components/componentes/DropDown.astro";
 ---
 
-<Layout title="dropdown">
-    <h1 class="text-white text-2xl">DropDown</h1>
-    <p class="text-white text-md">This is a DropDown.</p>
-    <div>
-        <DropDown />
-    </div>
-    <Code
-        class="max-w-fit p-2 border-2 rounded-2xl my-4"
-        code={`<div class="bg-gray-100 min-h-screen flex items-center justify-center">
-        <div class="relative inline-block text-left">
-            <button id="dropdown-button" class="inline-flex justify-center
-            w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white
-            border border-gray-300 rounded-md shadow-sm focus:outline-none
-            focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100
-            focus:ring-blue-500">
-                Theme
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 -mr-1" 
-                viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M6.293 9.293a1 1 0
-                     011.414 0L10 11.586l2.293-2.293a1 1 0 111.414
-                      1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" 
-                      clip-rule="evenodd" />
-                </svg>
-            </button>
-            <div id="dropdown-menu" class="origin-top-right absolute
-            right-0 mt-2 w-48 rounded-md shadow-lg 
-            bg-white ring-1 ring-black ring-opacity-5">
-                <div class="py-2 p-2" role="menu" 
-                aria-orientation="vertical" aria-labelledby="dropdown-button">
-                    <a class="flex block rounded-md px-4 py-2
-                    text-sm text-gray-700 hover:bg-gray-100
-                    active:bg-blue-100 cursor-pointer" role="menuitem">
-                      <svg></svg> Light
-                      </a>
-                    <a class="flex block rounded-md px-4 py-2
-                    text-sm text-gray-700 hover:bg-gray-100
-                    active:bg-blue-100 cursor-pointer" role="menuitem">
-                      <svg></svg> Dark
-                      </a>
-                    <a class="flex block rounded-md px-4 py-2
-                    text-sm text-gray-700 hover:bg-gray-100
-                    active:bg-blue-100 cursor-pointer" role="menuitem">
-                      <svg></svg> System
-                      </a>
-                </div>
+<Layout title="Dropdown">
+    <div class="w-[430px] sm:w-[500px] md:w-full">
+        <div class="my-4 text-center md:text-start">
+            <h1 class="text-3xl text-black dark:text-white">
+                <b>DropDown</b>
+            </h1>
+            <div class="flex justify-center items-center md:justify-start">
+                <p class="text-md max-w-[400px] md:max-w-[650px] text-black dark:text-white">
+                    This is a <b>Dropdown</b> to give three or more options to the user
+                </p>
             </div>
         </div>
+        <DropDown />
+        <div class="flex flex-col items-center justify-center my-6">
+            <div
+                class="bg-[#1E1E1E] py-2 w-[350px] md:w-full border-b-1 border-2 rounded-t-2xl"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-code text-white ml-3"
+                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                    ></path><path d="M7 8l-4 4l4 4"></path><path
+                        d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"
+                    ></path></svg
+                >
+            </div>
+            <Code
+                class="w-[350px] md:w-full p-2 border-2 border-t-0"
+                code={`<div class="bg-gray-100 min-h-screen flex items-center justify-center">
+                <div class="relative inline-block text-left">
+                    <button id="dropdown-button" class="inline-flex justify-center
+                    w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white
+                    border border-gray-300 rounded-md shadow-sm focus:outline-none
+                    focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100
+                    focus:ring-blue-500">
+                        Theme
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 -mr-1" 
+                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M6.293 9.293a1 1 0
+                             011.414 0L10 11.586l2.293-2.293a1 1 0 111.414
+                              1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" 
+                              clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div id="dropdown-menu" class="origin-top-right absolute
+                    right-0 mt-2 w-48 rounded-md shadow-lg 
+                    bg-white ring-1 ring-black ring-opacity-5">
+                        <div class="py-2 p-2" role="menu" 
+                        aria-orientation="vertical" aria-labelledby="dropdown-button">
+                            <a class="flex block rounded-md px-4 py-2
+                            text-sm text-gray-700 hover:bg-gray-100
+                            active:bg-blue-100 cursor-pointer" role="menuitem">
+                              <svg></svg> Light
+                              </a>
+                            <a class="flex block rounded-md px-4 py-2
+                            text-sm text-gray-700 hover:bg-gray-100
+                            active:bg-blue-100 cursor-pointer" role="menuitem">
+                              <svg></svg> Dark
+                              </a>
+                            <a class="flex block rounded-md px-4 py-2
+                            text-sm text-gray-700 hover:bg-gray-100
+                            active:bg-blue-100 cursor-pointer" role="menuitem">
+                              <svg></svg> System
+                              </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                const dropdownButton = document.getElementById('dropdown-button');
+                const dropdownMenu = document.getElementById('dropdown-menu');
+                let isDropdownOpen = false;
+        
+                // Function to toggle the dropdown
+                function toggleDropdown() {
+                    isDropdownOpen = !isDropdownOpen;
+                    if (isDropdownOpen) {
+                        dropdownMenu.classList.remove('hidden');
+                    } else {
+                        dropdownMenu.classList.add('hidden');
+                    }
+                }
+        
+                toggleDropdown();
+        
+                dropdownButton.addEventListener('click', toggleDropdown);
+        
+                window.addEventListener('click', (event) => {
+        if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.add('hidden');
+                    isDropdownOpen = false;
+                }
+            });
+            </script>`}
+                lang="astro"
+                theme="dark-plus"
+            />
+        </div>
     </div>
-    <script>
-        const dropdownButton = document.getElementById('dropdown-button');
-        const dropdownMenu = document.getElementById('dropdown-menu');
-        let isDropdownOpen = false;
-
-        // Function to toggle the dropdown
-        function toggleDropdown() {
-            isDropdownOpen = !isDropdownOpen;
-            if (isDropdownOpen) {
-                dropdownMenu.classList.remove('hidden');
-            } else {
-                dropdownMenu.classList.add('hidden');
-            }
-        }
-
-        toggleDropdown();
-
-        dropdownButton.addEventListener('click', toggleDropdown);
-
-        window.addEventListener('click', (event) => {
-if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.add('hidden');
-            isDropdownOpen = false;
-        }
-    });
-    </script>`}
-        lang="astro"
-        theme="dark-plus"
-    />
 </Layout>

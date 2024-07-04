@@ -1,17 +1,91 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { Code } from "astro:components";
-import toggle from "../../components/componentes/ThemeToggle.jsx";
+import Toggle from "../../components/componentes/ThemeToggle.astro";
 ---
 
 <Layout title="ThemeToggle">
-    <h1 class="text-white text-2xl">Button</h1>
-    <p class="text-white text-md">This is a button.</p>
-    <toggle/>
-    <Code
-        class="max-w-fit p-2 border-2 rounded-2xl my-4"
-        code={``}
-        lang="astro"
-        theme="dark-plus"
-    />
+    <div class="w-[430px] sm:w-[500px] md:w-full">
+        <div class="my-4 text-center md:text-start">
+            <h1 class="text-3xl text-black dark:text-white">
+                <b>Toggle Theme</b>
+            </h1>
+            <div class="flex justify-center items-center md:justify-start">
+                <p
+                    class="text-md max-w-[400px] md:max-w-[650px] text-black dark:text-white"
+                >
+                    This is a <b>Toggle Theme</b> to give the user the ability to
+                    choose the theme.
+                </p>
+            </div>
+        </div>
+
+        <!-- component -->
+        <div class="flex justify-center items-center">
+            <Toggle />
+        </div>
+
+        <div class="flex flex-col items-center justify-center my-6">
+            <div
+                class="bg-[#1E1E1E] py-2 w-[350px] md:w-full border-b-1 border-2 rounded-t-2xl"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-code text-white ml-3"
+                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                    ></path><path d="M7 8l-4 4l4 4"></path><path
+                        d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"
+                    ></path></svg
+                >
+            </div>
+            <Code
+                class="w-[350px] md:w-full p-2 border-2 border-t-0"
+                code={`<button
+    class="bg-kai-button
+ px-2.5 py-1.5
+text-black font-medium text-center
+justify-center inline-flex items-center flex-row
+rounded-lg border gap-x-2 opacity-90
+cursor-pointer hover:bg-kai-hover hover:text-white
+hover:opacity-100 hover:bg-black-600
+hover:scale-110 hover:shadow-lg
+dark:focus:ring-black-300
+focus:ring-2 focus:outline-none focus:ring-black-30
+transition-all duration-200 ease-in-out scale-90"
+    type="button"
+    id="theme-selector"
+>
+    <span class="sr-only"
+        >Enable <span class="dark:hidden">light</span><span
+            class="hidden dark:inline">dark</span
+        > mode</span
+    >
+    <div class="hidden dark:inline text-white"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-lighter"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 3v16a2 2 0 0 0 2 2h5a2 2 0 0 0 2 -2v-7h-12a2 2 0 0 1 -2 -2v-5a2 2 0 0 1 2 -2h3z" /><path d="M16 4l1.465 1.638a2 2 0 1 1 -3.015 .099l1.55 -1.737z" /></svg></div>
+    <div class="block dark:hidden text-white"><svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg></div>
+</button>
+
+<script>
+    document.getElementById("theme-selector")?.addEventListener("click", () => {
+        if (localStorage.theme === "dark") {
+            localStorage.theme = "light";
+            document.documentElement.classList.remove("dark");
+        } else {
+            localStorage.theme = "dark";
+            document.documentElement.classList.add("dark");
+        }
+    });
+</script>`}
+                lang="astro"
+                theme="dark-plus"
+            />
+        </div>
+    </div>
 </Layout>

@@ -1,85 +1,115 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { Code } from "astro:components";
-import Menu from "../../components/componentes/Menu.astro";
+import Menuu from "../../components/componentes/Menu.astro";
 ---
 
 <Layout title="Menu">
-    <h1 class="text-white text-2xl">Menu</h1>
-    <p class="text-white text-md">This is a Menu.</p>
-    <Code
-        class="max-w-fit p-2 border-2 rounded-2xl my-4"
-        code={`<nav>
+    <div class="w-[430px] sm:w-[500px] md:w-full">
+        <div class="my-4 text-center md:text-start">
+            <h1 class="text-3xl text-black dark:text-white">
+                <b>MENU</b>
+            </h1>
+            <div class="flex justify-center items-center md:justify-start">
+                <p
+                    class="text-md max-w-[400px] md:max-w-[650px] text-black dark:text-white"
+                >
+                    This is a <b>Menu</b>
+                </p>
+            </div>
+        </div>
+
+        <!-- component -->
+        <div class="flex justify-center items-center">
+            <Menuu />
+        </div>
+
+        <div class="flex flex-col items-center justify-center my-6">
+            <div
+                class="bg-[#1E1E1E] py-2 w-[350px] md:w-full border-b-1 border-2 rounded-t-2xl"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-code text-white ml-3"
+                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                    ></path><path d="M7 8l-4 4l4 4"></path><path
+                        d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"
+                    ></path></svg
+                >
+            </div>
+            <Code
+                class="w-[350px] md:w-full p-2 border-2 border-t-0"
+                code={`---
+const Links = [
+    {
+        name: "LINKS",
+        link: "/",
+    },
+];
+---
+
+<nav>
     <a
         id="menu-button"
         data-collapse-toggle="navbar-sticky"
         data-nav-toggle="#navbar-sticky"
-        class="cursor-pointer text-white"
+        class="cursor-pointer text-dark dark:text-white"
         aria-controls="navbar-sticky"
         aria-expanded="false"
     >
-        MENU
+        <b>MENU</b>
     </a>
     <div id="menu-open" class="hidden w-full navbar" id="navbar-sticky">
         <div
-            class="text-white w-[80vw] md:w-[40vw]
-            h-custom--calc md:h-custom-calc left-0
-            top-[51px] md:top-[65px] absolute p-3
-            bg-black font-medium border-2 md:mt-0"
+            class="text-white w-[80vw] md:w-[40vw] h-custom--calc md:h-custom-calc left-0 top-[51px] md:top-[65px] absolute p-3 bg-black font-medium border-2 md:mt-0"
         >
-            <div class="flex flex-col 
-            justify-between h-full text-start">
+            <div class="flex flex-col justify-between h-full text-start">
                 <div>
                     <ul class="w-fit">
                         <h3 class="underline">Dashboard</h3>
                         <li>
                             <a
                                 href="/"
-                                class="hover:underline
-                                text-start btn block py-2 pl-3
-                                text-white rounded md:bg-transparen
-                                md:py-1 hover:text-orange-600"
+                                class="hover:underline text-start btn block py-2 pl-3 text-white rounded md:bg-transparen md:py-1 hover:text-kai-text"
                                 aria-current="page"
                             >
                                 Home
                             </a>
                         </li>
-
+                        <li>
+                            <a
+                                href="/contact"
+                                class="hover:underline text-start btn block py-2 pl-3 text-white rounded md:bg-transparen md:py-1 hover:text-kai-text"
+                                aria-current="page"
+                            >
+                                Contact
+                            </a>
+                        </li>
                     </ul>
                     <ul class="w-fit">
                         <h3 class="underline"><b>Components</b></h3>
-                        <li>
-                            <a
-                                href="/product/shirt1"
-                                class="hover:underline text-start
-                                btn block py-2 pl-3 text-white
-                                rounded md:bg-transparen md:py-1
-                                hover:text-orange-600"
-                            >
-                                Acordion
-                            </a>
-                        </li>
 
+                        {
+                            Links.map((link) => (
+                                <li>
+                                    <a
+                                        href={link.link}
+                                        class="hover:underline text-start btn block py-1 pl-3 text-white rounded md:bg-transparen  hover:text-kai-text"
+                                    >
+                                        {link.name}
+                                    </a>
+                                </li>
+                            ))
+                        }
                     </ul>
-                </div>
-                <div>
-                    <div class="py-2"
-                        <ul class="w-full flex">
-                            <li
-                                class="flex justify-start items-center
-                                text-white hover:text-orange-600
-                                hover:cursor-pointer mx-2"
-                            >
-                                <svg
-                                </svg
-                                >
-                                <a href="">Instagram</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="border-t-2 py-2 border-white">
-                        <p class="mx-2"><b>Design: </b></p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -93,8 +123,11 @@ import Menu from "../../components/componentes/Menu.astro";
     button?.addEventListener("click", () => {
         menuOpen.classList.toggle("hidden");
     });
-</script>`}
-        lang="astro"
-        theme="dark-plus"
-    />
+</script>
+`}
+                lang="astro"
+                theme="dark-plus"
+            />
+        </div>
+    </div>
 </Layout>
