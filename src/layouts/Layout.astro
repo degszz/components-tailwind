@@ -3,13 +3,25 @@ interface Props {
 	title: string;
 }
 
+import '@fontsource-variable/karla';
+import '@fontsource/anton-sc';
 const { title } = Astro.props;
-import Header from '../components/Header.astro';
+import Header from "../components/Header.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html class="dark" lang="en">
 	<head>
+		<script>
+			if (
+			  localStorage.theme === 'dark' ||
+			  (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+			) {
+			  document.documentElement.classList.add('dark');
+			} else {
+			  document.documentElement.classList.remove('dark');
+			}
+		  </script>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
@@ -17,11 +29,12 @@ import Header from '../components/Header.astro';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-black">
-		<Header/>
-		<div class="mt-[51px] md:mt-[65px]">
-			<slot />
+	<body class="bg-kai-bg dark:bg-black font-serif">
+		<Header />
+		<div class="flex flex-col items-center">
+			<div class="mt-[51px] md:mt-[65px] md:max-w-[1000px]">
+				<slot />
+			</div>
 		</div>
 	</body>
 </html>
-

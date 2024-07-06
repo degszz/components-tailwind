@@ -1,24 +1,25 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { Code } from "astro:components";
-import Form from "../../components/componentes/Form.astro";
+import Foorm from "../../components/componentes/Form.astro";
 ---
 
 <Layout title="Form">
     <div class="w-[430px] sm:w-[500px] md:w-full">
         <div class="my-4 text-center md:text-start">
-            <h1 class="text-3xl text-black dark:text-white">
+            <h1 class="text-3xl text-black dark:text-white font-sans">
                 <b>Form</b>
             </h1>
             <div class="flex justify-center items-center md:justify-start">
                 <p
                     class="text-md max-w-[400px] md:max-w-[650px] text-black dark:text-white"
                 >
-                    This is a <b>Form</b> with method POST, to send the response to a database made with Astro DB.
+                    This is a <b>Form</b> with method POST, to send the response
+                    to a database made with Astro DB.
                 </p>
             </div>
         </div>
-        <Form />
+        <Foorm />
         <div class="flex flex-col items-center justify-center my-6">
             <div
                 class="bg-[#1E1E1E] py-2 w-[350px] md:w-full border-b-1 border-2 rounded-t-2xl"
