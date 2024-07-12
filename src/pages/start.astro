@@ -1,19 +1,194 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Car from "../components/componentes/Carousel.astro";
+import aco from "../components/componentes/Accordion.astro";
 ---
 
 <Layout title="Get Start">
     <div class="h-custom--calc md:h-custom-calc">
-        <div class="flex justify-start">
-            <div class="">
-                <h2 class="text-3xl dark:text-white font-sans"><b>Get Start</b></h2>
-                <p class="text-md dark:text-white">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Corrupti aut nulla porro quaerat sit officiis reprehenderit
-                    modi sunt suscipit natus, accusamus ad est dignissimos ipsa,
-                    laborum error unde possimus laudantium!
-                </p>
+        <div class="flex-col justify-start">
+            <div class="my-4 text-center md:text-start">
+                <h2 class="text-3xl dark:text-white font-sans">
+                    <b>Get Start</b>
+                </h2>
+                <div class="max-w-fit md:max-w-[650px]">
+                    <p class="text-md dark:text-white">
+                        This is a website where through classes we can have the
+                        components stylized. These components are made in
+                        frameworks such as Astro and React.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <Car />
+        <div class="py-4 px-8">
+            <div class="w-full">
+                <!-- Question 1 -->
+                <hr class="w-full lg:mt-10 md:mt-12 md:mb-8 my-8" />
+
+                <div class="w-full md:px-6">
+                    <div
+                        id="mainHeading"
+                        class="flex justify-between items-center w-full"
+                    >
+                        <div class="">
+                            <p
+                                class="flex justify-center items-center dark:text-white font-medium text-base leading-6 md:leading-4 text-gray-800"
+                            >
+                                <span
+                                    class="lg:mr-6 mr-4 dark:text-white lg:text-2xl md:text-xl text-lg leading-6 md:leading-5 lg:leading-4 font-semibold text-gray-800"
+                                    >#1</span
+                                >I don't have to install anything?
+                            </p>
+                        </div>
+                        <button
+                            aria-label="toggler"
+                            class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
+                            data-menu
+                        >
+                            <img
+                                class="transform dark:hidden"
+                                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2.svg"
+                                alt="toggler"
+                            />
+                            <img
+                                class="transform dark:block hidden"
+                                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg"
+                                alt="toggler"
+                            />
+                        </button>
+                    </div>
+                    <div id="menu" class="hidden mt-6 w-full">
+                        <p
+                            class="text-base leading-6 text-gray-600 dark:text-gray-300 font-normal"
+                        >
+                            You must install tailwind on the official website
+                            <a
+                                href="https://tailwindcss.com/docs/installation"
+                                class="underline hover:cursor-pointer text-kai-text"
+                                >https://tailwindcss.com/docs/installation</a
+                            >, to be able to style your components using
+                            classes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+
+                <hr class="w-full lg:mt-10 my-8" />
+
+                <div class="w-full md:px-6">
+                    <div
+                        id="mainHeading"
+                        class="flex justify-between items-center w-full"
+                    >
+                        <div class="">
+                            <p
+                                class="flex justify-center items-center dark:text-white font-medium text-base leading-6 lg:leading-4 text-gray-800"
+                            >
+                                <span
+                                    class="lg:mr-6 dark:text-white mr-4 lg:text-2xl md:text-xl text-lg leading-6 md:leading-5 lg:leading-4 font-semibold text-gray-800"
+                                    >#2</span
+                                >Can I change the appearance of the components? <br
+                                />
+                                how can I do it?
+                            </p>
+                        </div>
+                        <button
+                            aria-label="toggler"
+                            class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
+                            data-menu
+                        >
+                            <img
+                                class="transform dark:hidden"
+                                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2.svg"
+                                alt="toggler"
+                            />
+                            <img
+                                class="transform dark:block hidden"
+                                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg"
+                                alt="toggler"
+                            />
+                        </button>
+                    </div>
+                    <div id="menu" class="hidden mt-6 w-full">
+                        <p
+                            class="text-base leading-6 text-gray-600 dark:text-gray-300 font-normal"
+                        >
+                            Yes, you can change the style by copying the classes
+                            and editing them in your code editor.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+
+                <hr class="w-full lg:mt-10 my-8" />
+
+                <div class="w-full md:px-6">
+                    <div
+                        id="mainHeading"
+                        class="flex justify-between items-center w-full"
+                    >
+                        <div class="">
+                            <p
+                                class="flex justify-center items-center dark:text-white font-medium text-base leading-6 lg:leading-4 text-gray-800"
+                            >
+                                <span
+                                    class="lg:mr-6 dark:text-white mr-4 lg:text-2xl md:text-xl text-lg leading-6 md:leading-5 lg:leading-4 font-semibold text-gray-800"
+                                    >#3</span
+                                >Can I use these components in my projects?
+                            </p>
+                        </div>
+                        <button
+                            aria-label="toggler"
+                            class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
+                            data-menu
+                        >
+                            <img
+                                class="transform dark:hidden"
+                                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2.svg"
+                                alt="toggler"
+                            />
+                            <img
+                                class="transform dark:block hidden"
+                                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/faq-8-svg2dark.svg"
+                                alt="toggler"
+                            />
+                        </button>
+                    </div>
+                    <div id="menu" class="hidden mt-6 w-full">
+                        <p
+                            class="text-base leading-6 text-gray-600 dark:text-gray-300 font-normal"
+                        >
+                            Yes, you can use these components in your projects
+                            as they are styled to your liking and you can change
+                            them.
+                        </p>
+                    </div>
+                </div>
+
+                <hr class="w-full lg:mt-10 my-8" />
             </div>
         </div>
     </div>
 </Layout>
+
+<script>
+    let elements = document.querySelectorAll("[data-menu]");
+    for (let i = 0; i < elements.length; i++) {
+        let main = elements[i];
+
+        main.addEventListener("click", function () {
+            let element = main.parentElement.parentElement;
+            let indicators = main.querySelectorAll("img");
+            let child = element.querySelector("#menu");
+            let h = element.querySelector("#mainHeading>div>p");
+
+            h.classList.toggle("font-semibold");
+            child.classList.toggle("hidden");
+            // console.log(indicators[0]);
+            indicators[0].classList.toggle("rotate-180");
+        });
+    }
+</script>
