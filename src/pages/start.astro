@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Car from "../components/componentes/Carousel.astro";
-import aco from "../components/componentes/Accordion.astro";
 ---
 
 <Layout title="Get Start">
@@ -180,13 +179,13 @@ import aco from "../components/componentes/Accordion.astro";
         let main = elements[i];
 
         main.addEventListener("click", function () {
-            let element = main.parentElement.parentElement;
+            let element = main.parentElement?.parentElement;
             let indicators = main.querySelectorAll("img");
-            let child = element.querySelector("#menu");
-            let h = element.querySelector("#mainHeading>div>p");
+            let child = element?.querySelector("#menu");
+            let h = element?.querySelector("#mainHeading>div>p");
 
-            h.classList.toggle("font-semibold");
-            child.classList.toggle("hidden");
+            h?.classList.toggle("font-semibold");
+            child?.classList.toggle("hidden");
             // console.log(indicators[0]);
             indicators[0].classList.toggle("rotate-180");
         });

@@ -11,8 +11,11 @@ import DropDown from "../../components/componentes/DropDown.astro";
                 <b>DropDown</b>
             </h1>
             <div class="flex justify-center items-center md:justify-start">
-                <p class="text-md max-w-[400px] md:max-w-[650px] text-black dark:text-white">
-                    This is a <b>Dropdown</b> to give three or more options to the user
+                <p
+                    class="text-md max-w-[400px] md:max-w-[650px] text-black dark:text-white"
+                >
+                    This is a <b>Dropdown</b> to give three or more options to the
+                    user
                 </p>
             </div>
         </div>
@@ -81,30 +84,32 @@ import DropDown from "../../components/componentes/DropDown.astro";
                 </div>
             </div>
             <script>
-                const dropdownButton = document.getElementById('dropdown-button');
-                const dropdownMenu = document.getElementById('dropdown-menu');
-                let isDropdownOpen = false;
-        
-                // Function to toggle the dropdown
-                function toggleDropdown() {
-                    isDropdownOpen = !isDropdownOpen;
-                    if (isDropdownOpen) {
-                        dropdownMenu.classList.remove('hidden');
-                    } else {
-                        dropdownMenu.classList.add('hidden');
-                    }
-                }
-        
-                toggleDropdown();
-        
-                dropdownButton.addEventListener('click', toggleDropdown);
-        
-                window.addEventListener('click', (event) => {
-        if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        const dropdownButton = document.getElementById('dropdown-button');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        let isDropdownOpen = false;
+
+        function toggleDropdown() {
+            isDropdownOpen = !isDropdownOpen;
+            if (isDropdownOpen) {
+                dropdownMenu!.classList.remove('hidden');
+            } else {
+                dropdownMenu!.classList.add('hidden');
+            }
+        }
+
+        // Asegurarse de que los elementos no sean null antes de agregar los eventos
+        if (dropdownButton && dropdownMenu) {
+            toggleDropdown();
+
+            dropdownButton.addEventListener('click', toggleDropdown);
+
+            window.addEventListener('click', (event) => {
+                if (!dropdownButton.contains(event.target as Node) && !dropdownMenu.contains(event.target as Node)) {
                     dropdownMenu.classList.add('hidden');
                     isDropdownOpen = false;
                 }
             });
+        }
             </script>`}
                 lang="astro"
                 theme="dark-plus"

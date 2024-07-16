@@ -1,39 +1,47 @@
-<div class="w-[430px] sm:w-[500px] md:w-full">
-    <div class="my-4 text-center md:text-start">
-        <h1 class="text-3xl text-black dark:text-white font-sans">
-            <b></b>
-        </h1>
-        <p class="text-md max-w-[400px]  md:max-w-[650px] text-black dark:text-white">
-            This is a <b>Carousel</b> 
-        </p>
-    </div>
-    
-    <!-- component -->
+---
+import Layout from "../../layouts/Layout.astro";
+import { Code } from "astro:components";
+---
 
-    
-    <div class="flex flex-col items-center justify-center my-6">
-        <div class="bg-[#1E1E1E] py-2 w-[350px] md:w-full border-b-1 border-2 rounded-t-2xl">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-code text-white ml-3"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                    d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"
-                ></path><path d="M14 4l-4 16"></path></svg
-            >
+
+<Layout title="Copy">
+    <div class="w-[430px] sm:w-[500px] md:w-full">
+        <div class="my-4 text-center md:text-start">
+            <h1 class="text-3xl text-black dark:text-white font-sans">
+                <b></b>
+            </h1>
+            <p class="text-md max-w-[400px]  md:max-w-[650px] text-black dark:text-white">
+                This is a <b>Carousel</b> 
+            </p>
         </div>
-        <Code
-            class="w-[350px] md:w-full p-2 border-2 border-t-0"
-            
-            lang="astro"
-            theme="dark-plus"
-        />
+        
+        <!-- component -->
+    
+        
+        <div class="flex flex-col items-center justify-center my-6">
+            <div class="bg-[#1E1E1E] py-2 w-[350px] md:w-full border-b-1 border-2 rounded-t-2xl">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-code text-white ml-3"
+                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                        d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"
+                    ></path><path d="M14 4l-4 16"></path></svg
+                >
+            </div>
+            <Code
+                class="w-[350px] md:w-full p-2 border-2 border-t-0"
+                code={`const hola= 1`}
+                lang="astro"
+                theme="dark-plus"
+            />
+        </div>
     </div>
-</div>
+</Layout>

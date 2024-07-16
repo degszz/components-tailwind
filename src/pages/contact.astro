@@ -2,7 +2,6 @@
 import Layout from "../layouts/Layout.astro";
 
 import { db, Message } from "astro:db";
-const message = await db.select().from(Message);
 
 if (Astro.request.method === "POST") {
     const formData = await Astro.request.formData();
