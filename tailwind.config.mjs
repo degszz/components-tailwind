@@ -11,7 +11,7 @@ export default {
 			},
 			fontFamily: {
 				serif: ['Karla Variable', ...defaultTheme.fontFamily.serif],
-				sans:['Anton SC', ...defaultTheme.fontFamily.sans]
+				sans:['IBM Plex Sans', ...defaultTheme.fontFamily.sans]
 			},
 			colors: {
 				'kai': {
