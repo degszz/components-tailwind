@@ -17,9 +17,11 @@ import Caroouusel from "../../components/componentes/Carousel.astro"
                 </p>
             </div>
         </div>
-        <Caroouusel />
+        <div class="flex flex-col justify-center items-center bg-[#1E1E1E] p-4 rounded-xl border-2 border-kai-ring dark:border-kai-950">
+            <Caroouusel />
+        </div>
         <div class="flex flex-col items-center justify-center my-6">
-            <div class="bg-[#1E1E1E] py-2 w-[350px] md:w-full border-b-1 border-2 rounded-t-2xl">
+            <div class="w-full md:w-full py-2 bg-[#1E1E1E] border-b-1 border-2 border-kai-ring dark:border-kai-950 rounded-t-xl">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -37,7 +39,7 @@ import Caroouusel from "../../components/componentes/Carousel.astro"
                 >
             </div>
             <Code
-                class="w-[350px] md:w-full p-2 border-2 border-t-0"
+                class="max-w-[1000px] lg:min-w-[1000px] w-full p-2 border-2 border-t-0 border-kai-ring dark:border-kai-950"
                 code={`export function Carousel() {
     document.addEventListener('DOMContentLoaded', () => {
         const slider = document.querySelector('#slider');

@@ -1,0 +1,19 @@
+---
+interface Props {
+    clase:string;
+    code: string;
+    lang:string;
+    theme:string;
+
+}
+import { Code } from "astro:components"
+
+const { clase, code, lang, theme } = Astro.props;
+
+---
+<Code
+class={clase}
+code={code}
+lang={}
+theme="dark-plus"
+/>
