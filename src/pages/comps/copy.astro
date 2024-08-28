@@ -5,40 +5,27 @@ import { Code } from "astro:components";
 
 
 <Layout title="Copy">
-    <div class="max-w-[370px] md:w-[650px] lg:w-full md:max-w-none">
-        <div class="my-4 text-center md:text-start">
+    <div class="max-w-[450px] md:w-[650px] lg:w-full md:max-w-none">
+        <div class="my-4 ">
             <h1 class="text-3xl text-black dark:text-white font-sans">
-                <b></b>
+                <b>Carousel</b>
             </h1>
-            <p class="text-md max-w-[400px]  md:max-w-[650px] text-black dark:text-white">
-                This is a <b>Carousel</b> 
+            <p class="text-md text-black dark:text-white">
+                This is a <b>Carousel</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, adipisci odit, temporibus aspernatur sed nostrum autem esse minus consequatur repudiandae laudantium sunt, necessitatibus nobis mollitia cum eos. Ex, molestiae provident? 
             </p>
         </div>
         
         <!-- component -->
-    
+        <div class="flex flex-col justify-center items-center bg-[#1E1E1E] p-4 rounded-md border-2 border-kai-ring dark:border-kai-950">
+        </div>
         
-        <div class="flex flex-col items-center justify-center my-6">
-            <div class="bg-[#1E1E1E] py-2 w-[350px] md:w-full border-b-1 border-2 rounded-t-2xl">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-code text-white ml-3"
-                    ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-                        d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"
-                    ></path><path d="M14 4l-4 16"></path></svg
-                >
-            </div>
+        <div class="flex flex-col justify-center my-6">
+            <p class="text-md text-black dark:text-white">Code:</p>
             <Code
-                class="w-[350px] md:w-full p-2 border-2 border-t-0"
-                code={`const hola= 1`}
+                class="w-[350px] md:w-full p-2 border-2 rounded-md"
+                code={`
+                
+                `}
                 lang="astro"
                 theme="dark-plus"
             />

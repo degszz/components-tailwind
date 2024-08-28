@@ -3,26 +3,31 @@ interface Props {
 	title: string;
 }
 
-import '@fontsource-variable/karla';
-import '@fontsource/ibm-plex-sans/700.css';
+import "@fontsource-variable/karla";
+import "@fontsource/ibm-plex-sans/700.css";
 const { title } = Astro.props;
 import Header from "../components/Header.astro";
-import Footer from '../components/Footer.astro';
+import Footer from "../components/Footer.astro";
+
+import '../components/CopyCodeButton/style.css';
 ---
 
 <!doctype html>
 <html class="dark" lang="en">
 	<head>
 		<script>
+			import "../components/CopyCodeButton/copy-code-button.js";
+			import "../components/CopyCodeButton/create-copy-buttons.js";
 			if (
-			  localStorage.theme === 'dark' ||
-			  (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+				localStorage.theme === "dark" ||
+				(!("theme" in localStorage) &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches)
 			) {
-			  document.documentElement.classList.add('dark');
+				document.documentElement.classList.add("dark");
 			} else {
-			  document.documentElement.classList.remove('dark');
+				document.documentElement.classList.remove("dark");
 			}
-		  </script>
+		</script>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
@@ -37,7 +42,6 @@ import Footer from '../components/Footer.astro';
 				<slot />
 			</div>
 		</div>
-		<Footer/>
+		<Footer />
 	</body>
 </html>
-
