@@ -6,8 +6,11 @@ export default {
 	theme: {
 		extend: {
 			height: {
-				'custom-calc': 'calc(100vh - 65px)',
+				'custom-calc': 'calc(100vh - 63px)',
 				'custom--calc': 'calc(100vh - 51px)',
+			},
+			width:{
+				'custom-calc': 'calc(100vw - 200px)',
 			},
 			fontFamily: {
 				serif: ['Karla Variable', ...defaultTheme.fontFamily.serif],

@@ -6,14 +6,12 @@ import Toggle from "../../components/componentes/ThemeToggle.astro";
 
 <Layout title="ThemeToggle">
     <div class="max-w-[450px] md:w-[650px] lg:w-full md:max-w-none">
-        <div class="my-4 ">
+        <div class="my-4">
             <h1 class="text-3xl text-black dark:text-white font-sans">
                 <b>Toggle Theme</b>
             </h1>
             <div class="flex items-center md:justify-start">
-                <p
-                    class="text-md text-black dark:text-white"
-                >
+                <p class="text-md text-black dark:text-white">
                     This is a <b>Toggle Theme</b> to give the user the ability to
                     choose the theme.
                 </p>
@@ -21,7 +19,9 @@ import Toggle from "../../components/componentes/ThemeToggle.astro";
         </div>
 
         <!-- component -->
-        <div class="flex flex-col justify-center items-center bg-[#1E1E1E] p-4 rounded-md border-2 border-kai-ring dark:border-kai-950">
+        <div
+            class="flex flex-col justify-center min-h-[500px] items-center bg-[#1E1E1E] p-4 rounded-md border-2 border-kai-ring dark:border-kai-950"
+        >
             <Toggle />
         </div>
 
