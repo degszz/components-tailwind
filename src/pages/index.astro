@@ -6,76 +6,78 @@ import Button from "../components/componentes/Button.astro";
 ---
 
 <Layout title="Custom Design">
-	<div
-		class="w-full lg:justify-start lg:min-w-[770px] py-6 flex flex-col md:flex-row justify-center md:items-center
-		animate-flip-up animate-duration-4000 animate-delay-2000"
-	>
-		<div class="text-start max-w-[280px] md:max-w-[400px]">
-			<div class="">
-				<h1 class="text-3xl text-dark dark:text-white font-sans">
-					<b>Design System <br /> With Tailwind</b>
-				</h1>
-				<p class="text-md text-dark dark:text-white">
-					The components will be styled with Tailwind using classes,
-					so you simply have to copy and paste.
-				</p> 
+	<div>
+		<div
+			class="w-full lg:justify-start lg:min-w-[770px] py-6 flex flex-col md:flex-row justify-center md:items-center
+			animate-flip-up animate-duration-4000 animate-delay-2000"
+		>
+			<div class="text-start max-w-[280px] md:max-w-[400px]">
+				<div class="">
+					<h1 class="text-3xl text-dark dark:text-white font-sans">
+						<b>Design System <br /> With Tailwind</b>
+					</h1>
+					<p class="text-md text-dark dark:text-white">
+						The components will be styled with Tailwind using classes,
+						so you simply have to copy and paste.
+					</p> 
+				</div>
+				<div class="w-full flex items-center justify-start my-2">
+					<a
+						href="/start"
+						class="bg-kai-button
+						mr-2 mb-2 px-2.5 py-1.5
+						text-white font-medium text-center
+						justify-center inline-flex items-center flex-row
+						rounded-lg border gap-x-2 opacity-90
+						cursor-pointer hover:bg-kai-hover hover:text-white
+						hover:opacity-100 hover:bg-black-600
+						hover:scale-110 hover:shadow-lg
+						dark:focus:ring-black-300
+						focus:ring-2 focus:outline-none focus:ring-black-30
+						transition-all duration-200 ease-in-out scale-90"
+						>Get Start</a
+					>
+					<a
+						href="https://github.com/degszz"
+						class="bg-kai-button
+						mr-2 mb-2 px-2.5 py-1.5
+						text-white font-medium text-center
+						justify-center inline-flex items-center flex-row
+						rounded-lg border gap-x-2 opacity-90
+						cursor-pointer hover:bg-kai-hover hover:text-white
+						hover:opacity-100 hover:bg-black-600
+						hover:scale-110 hover:shadow-lg
+						dark:focus:ring-black-300
+						focus:ring-2 focus:outline-none focus:ring-black-30
+						transition-all duration-200 ease-in-out scale-90"
+						target="_blank"
+						><svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"
+							><path stroke="none" d="M0 0h24v24H0z" fill="none"
+							></path><path
+								d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+							></path></svg
+						></a
+					>
+				</div>
 			</div>
-			<div class="w-full flex items-center justify-start my-2">
-				<a
-					href="/start"
-					class="bg-kai-button
-					mr-2 mb-2 px-2.5 py-1.5
-					text-white font-medium text-center
-					justify-center inline-flex items-center flex-row
-					rounded-lg border gap-x-2 opacity-90
-					cursor-pointer hover:bg-kai-hover hover:text-white
-					hover:opacity-100 hover:bg-black-600
-					hover:scale-110 hover:shadow-lg
-					dark:focus:ring-black-300
-					focus:ring-2 focus:outline-none focus:ring-black-30
-					transition-all duration-200 ease-in-out scale-90"
-					>Get Start</a
-				>
-				<a
-					href="https://github.com/degszz"
-					class="bg-kai-button
-					mr-2 mb-2 px-2.5 py-1.5
-					text-white font-medium text-center
-					justify-center inline-flex items-center flex-row
-					rounded-lg border gap-x-2 opacity-90
-					cursor-pointer hover:bg-kai-hover hover:text-white
-					hover:opacity-100 hover:bg-black-600
-					hover:scale-110 hover:shadow-lg
-					dark:focus:ring-black-300
-					focus:ring-2 focus:outline-none focus:ring-black-30
-					transition-all duration-200 ease-in-out scale-90"
-					target="_blank"
-					><svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="24"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"
-						><path stroke="none" d="M0 0h24v24H0z" fill="none"
-						></path><path
-							d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
-						></path></svg
-					></a
-				>
+			<div class="w-full md:w-fit flex justify-center">
+				<img
+					src="/puzzle.png"
+					class="w-[200px] md:w-[300px] md:h-[300px]
+				animate-jump animate-infinite animate-duration-[2500ms] animate-delay-1000"
+					alt=""
+				/>
 			</div>
-		</div>
-		<div class="w-full md:w-fit flex justify-center">
-			<img
-				src="/puzzle.png"
-				class="w-[200px] md:w-[300px] md:h-[300px]
-			animate-jump animate-infinite animate-duration-[2500ms] animate-delay-1000"
-				alt=""
-			/>
 		</div>
 	</div>
 

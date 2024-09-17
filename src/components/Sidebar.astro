@@ -24,28 +24,22 @@ const Links = [
         name: "Form",
         link: "/comps/form",
     },
-    {
-        name: "Header",
-        link: "/comps/header",
-    },
-    {
-        name: "Menu",
-        link: "/comps/menu",
-    },
+
     {
         name: "Theme Toggle",
         link: "/comps/themetoggle",
     },
 ];
+
 ---
 
 <nav
-    class="hidden lg:block h-custom-calc w-[200px] bg-white dark:bg-black dark:text-white top-[63px] z-[1000] fixed border-2"
+    class="hidden lg:block h-custom-calc w-[200px] bg-white border-r-2 dark:bg-black dark:text-white top-[63px] z-[1000] fixed "
 >
-    <div class="flex flex-col justify-between h-full text-start p-2">
-        <div>
+    <div class="ml-[25px] flex flex-col justify-between h-full text-start p-2">
+        <div >
             <ul class="w-fit">
-                <h3 class="underline">Dashboard</h3>
+                <h3 class=""><b>Dashboard</b></h3>
                 <li>
                     <a
                         href="/"
@@ -57,14 +51,14 @@ const Links = [
                 </li>
             </ul>
             <ul class="w-fit">
-                <h3 class="underline">Components</h3>
+                <h3 class=""><b>Components</b></h3>
 
                 {
                     Links.map((link) => (
                         <li>
                             <a
                                 href={link.link}
-                                class="hover:underline text-start btn block py-1 pl-3 dark:text-white dark:hover:text-kai-text rounded md:bg-transparen  hover:text-kai-text"
+                                class="hover:underline text-start block py-1 pl-3 dark:text-white dark:hover:text-kai-text rounded md:bg-transparent focus:underline hover:text-kai-text"
                             >
                                 {link.name}
                             </a>
@@ -72,38 +66,6 @@ const Links = [
                     ))
                 }
             </ul>
-        </div>
-        <div>
-            <div class="py-2">
-                <div class="flex justify-around w-full">
-                    <button
-                        class="hover:scale-110 transition-all duration-200 ease-in-out scale-90 hover:bg-kai-hover bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                        type="button"
-                    >
-                        <a href="https://github.com/degszz" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </button>
-                    <button
-                        class="hover:scale-110 transition-all duration-200 ease-in-out scale-90 hover:bg-kai-hover bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                        type="button"
-                    >
-                        <a
-                            href="https://www.linkedin.com/in/maximo-figuera-531231323/" target="_blank"
-                        >
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </button>
-                    <button
-                        class="hover:scale-110 transition-all duration-200 ease-in-out scale-90 hover:bg-kai-hover bg-white text-[#ff0080] shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
-                        type="button"
-                    >
-                        <a href="https://www.instagram.com/z3maxi/" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </button>
-                </div>
-            </div>
         </div>
     </div>
 </nav>

@@ -7,12 +7,14 @@ import ThemeToggle from "./ThemeToggle.astro";
     class="z-[1000] bg-white dark:bg-black fixed top-0 border-b-2 text-white-950 h-[51px] md:h-[65px] w-full flex items-center justify-between"
 >
     <div
-        class="flex px-1 items-center justify-center min-w-[100px] text-center h-full"
+        class="flex px-1 items-center justify-center min-w-[100px] text-center h-full lg:w-[200px]"
     >
         <Menu />
+        <div class="hidden lg:block dark:text-white text-xl w-full font-sans">
+            <span>Design System</span>
+        </div>
     </div>
     <div class="flex w-full h-full justify-center items-center">
-        <div>🧩</div>
     </div>
     <div
         class="flex px-1 items-center justify-center min-w-[100px] text-center h-full"

@@ -4,34 +4,74 @@ import Accordionnn from "../../components/componentes/Accordion.astro";
 import { Code } from "astro:components";
 ---
 
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
+/>
+
 <Layout title="Accordion">
-    <div class="max-w-[450px] md:w-[650px] lg:w-full md:max-w-none">
+    <div class="max-w-[350px] md:w-[650px] lg:w-full md:max-w-none mb-[30px]">
         <div class="my-4 text-start">
             <h1 class="text-3xl text-black dark:text-white font-sans">
                 <b>Accordion</b>
             </h1>
             <div class="">
-                <p
-                    class="text-md text-black dark:text-white"
-                >
+                <p class="text-md text-black dark:text-white">
                     This is the <b>Accordion</b> to place text below when clicking.
                 </p>
             </div>
         </div>
 
-        <div class="flex min-h-[400px] flex-col justify-center items-center bg-[#1E1E1E] p-4 rounded-md border-2 border-kai-ring dark:border-kai-950">
-            <Accordionnn />
-        </div>
+        <!-- component -->
 
-        <div class="flex flex-col justify-center my-6">
-            <p class="text-md text-black dark:text-white">Code:</p>
-            <Code
-                class="max-w-[1000px] lg:min-w-[1000px] w-full p-2 border-2 rounded-md border-kai-ring dark:border-kai-950"
-                code={`<div class="py-4 px-8">
+        <!-- This is an example component -->
+        <div class="lg:min-w-[800px]">
+            <div class="border-b border-gray-200 dark:border-white mb-4">
+                <ul
+                    class="flex flex-wrap -mb-px"
+                    id="myTab"
+                    data-tabs-toggle="#myTabContent"
+                    role="tablist"
+                >
+                    <li class="mr-2" role="presentation">
+                        <button
+                            class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300 active"
+                            id="dashboard-tab"
+                            data-tabs-target="#dashboard"
+                            type="button"
+                            role="tab"
+                            aria-controls="dashboard"
+                            aria-selected="true">Component</button
+                        >
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button
+                            class="inline-block text-gray-500 hover:text-gray-600 hover:border-gray-300 rounded-t-lg py-4 px-4 text-sm font-medium text-center border-transparent border-b-2 dark:text-gray-400 dark:hover:text-gray-300"
+                            id="profile-tab"
+                            data-tabs-target="#profile"
+                            type="button"
+                            role="tab"
+                            aria-controls="profile"
+                            aria-selected="false">Code</button
+                        >
+                    </li>
+                </ul>
+            </div>
+            <div id="myTabContent">
+                <div
+                    class="hidden"
+                    id="profile"
+                    role="tabpanel"
+                    aria-labelledby="profile-tab"
+                >
+                    <div class="flex flex-col justify-center my-6">
+                        <Code
+                            class="lg:max-w-[800px] max-h-[500px] lg:min-w-[800px] w-full p-2 border-2 rounded-md border-kai-ring dark:border-kai-950"
+                            code={`<div class="py-4 px-8">
     <div class="w-full">
         <!-- Question 1 -->
         <hr class="w-full lg:mt-10 md:mt-12 md:mb-8 my-8" />
-
+    
         <div class="w-full md:px-6">
             <div
                 id="mainHeading"
@@ -76,11 +116,11 @@ import { Code } from "astro:components";
                 </p>
             </div>
         </div>
-
+    
         <!-- Question 2 -->
-
+    
         <hr class="w-full lg:mt-10 my-8" />
-
+    
         <div class="w-full md:px-6">
             <div
                 id="mainHeading"
@@ -126,11 +166,11 @@ import { Code } from "astro:components";
                 </p>
             </div>
         </div>
-
+    
         <!-- Question 3 -->
-
+    
         <hr class="w-full lg:mt-10 my-8" />
-
+    
         <div class="w-full md:px-6">
             <div
                 id="mainHeading"
@@ -175,34 +215,53 @@ import { Code } from "astro:components";
                 </p>
             </div>
         </div>
-
+    
         <hr class="w-full lg:mt-10 my-8" />
     </div>
-</div>
-
-<script>
+    </div>
+    
+    <script>
     let elements = document.querySelectorAll("[data-menu]");
     for (let i = 0; i < elements.length; i++) {
         let main = elements[i];
-
+    
         main.addEventListener("click", function () {
             let element = main.parentElement?.parentElement;
             let indicators = main.querySelectorAll("img");
             let child = element?.querySelector("#menu");
             let h = element?.querySelector("#mainHeading>div>p");
-
+    
             h?.classList.toggle("font-semibold");
             child?.classList.toggle("hidden");
             // console.log(indicators[0]);
             indicators[0].classList.toggle("rotate-180");
         });
     }
-</script>
-`}
-                lang="astro"
-                theme="dark-plus"
-            />
+    </script>
+    `}
+                            lang="astro"
+                            theme="dark-plus"
+                        />
+                    </div>
+                </div>
+                <div
+                    class=""
+                    id="dashboard"
+                    role="tabpanel"
+                    aria-labelledby="dashboard-tab"
+                >
+                    <div
+                        class="flex max-h-[500px] lg:min-w-[800px]  flex-col justify-center items-center bg-[#1E1E1E] p-4 rounded-md border-2 border-kai-ring dark:border-kai-950"
+                    >
+                        \
+                        <Accordionnn />
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
 </Layout>
-<script src="/src/pages/api/copy.js" defer></script>
+<script
+    src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"
+></script>
