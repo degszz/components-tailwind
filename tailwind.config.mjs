@@ -9,25 +9,24 @@ export default {
 				'custom-calc': 'calc(100vh - 63px)',
 				'custom--calc': 'calc(100vh - 51px)',
 			},
-			width:{
+			width: {
 				'custom-calc': 'calc(100vw - 200px)',
 			},
 			fontFamily: {
 				serif: ['Karla Variable', ...defaultTheme.fontFamily.serif],
-				sans:['IBM Plex Sans', ...defaultTheme.fontFamily.sans]
+				sans: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans]
 			},
 			colors: {
 				'kai': {
-					'bg': '#e7f0f8',
-					'200': '#d3e2f2',
-					'300': '#b9cfe8',
-					'text': '#9cb6dd',
-					'button': '#839dd1',
-					'600': '#6a7fc1',
-					'ring': '#6374ae',
-					'hover': '#4a5989',
-					'900': '#414e6e',
-					'950': '#262c40',
+					'200': '#d8d9df',
+					'300': '#b6b8c3',
+					'text': '#8f92a1',
+					'button': '#717486',
+					'600': '#5b5d6e',
+					'ring': '#4a4b5a',
+					'hover': '#434450',
+					'900': '#383842',
+					'bg': '#25252c',
 				},
 			}
 		},
