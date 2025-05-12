@@ -18,6 +18,8 @@ export default {
 			},
 			colors: {
 				'kai': {
+					'50': '#f7f7f8',
+					'100': '#ededf1',
 					'200': '#d8d9df',
 					'300': '#b6b8c3',
 					'text': '#8f92a1',
