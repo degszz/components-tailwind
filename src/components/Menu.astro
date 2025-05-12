@@ -36,7 +36,6 @@ const Links = [
         name: "Theme Toggle",
         link: "/comps/themetoggle",
     },
-
 ];
 ---
 
@@ -45,15 +44,30 @@ const Links = [
         id="menu-button"
         data-collapse-toggle="navbar-sticky"
         data-nav-toggle="#navbar-sticky"
-        class="cursor-pointer text-dark dark:text-white hover:underline lg:hidden"
+        class="cursor-pointer text-dark  dark:text-white lg:hidden"
         aria-controls="navbar-sticky"
         aria-expanded="false"
     >
-        <b>MENU</b>
+        <b
+            ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-menu hover:scale-110 scale-90"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                    d="M4 8l16 0"></path><path d="M4 16l16 0"></path></svg
+            ></b
+        >
     </a>
-    <div id="menu-open" class="hidden w-full navbar" id="navbar-sticky">
+    <div id="menu-open" class="hidden w-full navbar " id="navbar-sticky">
         <div
-            class="dark:text-white bg-white dark:bg-black w-[60vw] md:w-[40vw] h-custom--calc md:h-custom-calc left-0 top-[51px] md:top-[65px] absolute p-3  font-medium  md:mt-0"
+            class="dark:text-white bg-white animate-fade-right animate-duration-300 animate-delay-0 dark:bg-black w-[40vw] md:w-[60vw] h-custom--calc md:h-custom-calc lg:hidden left-0 top-[51px] md:top-[65px] absolute p-3 font-medium md:mt-0"
         >
             <div class="flex flex-col justify-between h-full text-start">
                 <div>
