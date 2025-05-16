@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import { Code } from "astro:components";
 import DropDown from "../../components/componentes/DropDown.astro";
 ---
+
 <link
     rel="stylesheet"
     href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css"
@@ -62,7 +63,7 @@ import DropDown from "../../components/componentes/DropDown.astro";
                 >
                     <div class="flex flex-col justify-center my-6">
                         <Code
-                            class="lg:max-w-[800px] max-h-[500px] min-h-[300px] lg:min-w-[800px] w-full p-2 border-2 rounded-md border-kai-ring dark:border-kai-950"
+                            class="text-sm w-full lg:max-w-[800px] lg:min-w-[800px] p-2 border-2 rounded-md border-kai-ring dark:border-kai-950"
                             code={`<div class="bg-gray-100 min-h-screen flex items-center justify-center">
 <div class="relative inline-block text-left">
     <button id="dropdown-button" class="inline-flex justify-center
@@ -117,14 +118,17 @@ dropdownMenu!.classList.add('hidden');
 }
 }
 
-// Asegurarse de que los elementos no sean null antes de agregar los eventos
+// Asegurarse de que los elementos no sean
+//  null antes de agregar los eventos
 if (dropdownButton && dropdownMenu) {
 toggleDropdown();
 
 dropdownButton.addEventListener('click', toggleDropdown);
 
 window.addEventListener('click', (event) => {
-if (!dropdownButton.contains(event.target as Node) && !dropdownMenu.contains(event.target as Node)) {
+if (!dropdownButton.contains(event.target as Node) 
+&&
+!dropdownMenu.contains(event.target as Node)) {
     dropdownMenu.classList.add('hidden');
     isDropdownOpen = false;
 }
@@ -155,4 +159,3 @@ if (!dropdownButton.contains(event.target as Node) && !dropdownMenu.contains(eve
 <script
     src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"
 ></script>
-
