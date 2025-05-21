@@ -7,24 +7,35 @@ import ThemeToggle from "./ThemeToggle.astro";
     class="z-[1000] bg-kai-100 dark:bg-kai-bg fixed top-0 lg:border-b-2 text-white-950 h-[51px] md:h-[65px] w-full flex items-center justify-between"
 >
     <div
-        class="flex px-1 items-center justify-center min-w-[100px] text-center h-full lg:w-[200px]"
+        class="flex pl-5 lg:min-w-[190px] items-center justify-center w-fit text-center h-full lg:w-[200px]"
     >
-    <Menu />
+        <Menu />
         <div class="hidden lg:block dark:text-white text-xl w-full font-sans">
-            
             <span>Design System</span>
         </div>
     </div>
-    <div class="flex w-full h-full justify-center items-center">
-<!--         <ul class="">
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul> -->
+    <div class="flex w-full h-full justify-center items-center ">
+        <ul class="flex justify-center">
+            <li>
+                <div class="mx-[10px] dark:text-white px-2 py-[2px] flex hover:cursor-pointer text-black  rounded-md hover:bg-kai-200 dark:hover:bg-kai-hover">
+                    <span class="mr-1"><b>lorem</b></span>
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 10l6 6l6 -6h-12" /></svg>
+                </div>
+            </li>
+            <li>
+                <div class="mx-[10px] dark:text-white px-2 py-[2px] flex hover:cursor-pointer text-black  rounded-md hover:bg-kai-200 dark:hover:bg-kai-hover">
+                    <span class="mr-1"><b>lorem</b></span>
+                    <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-caret-down"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 10l6 6l6 -6h-12" /></svg>
+                </div>
+            </li>
+
+        </ul> 
     </div>
     <div
-        class="flex px-1 items-center justify-around min-w-[100px] text-center h-full"
+        class="flex pr-5 items-center justify-around text-center h-full"
     >
         <ThemeToggle />
     </div>
 </header>
+
+
