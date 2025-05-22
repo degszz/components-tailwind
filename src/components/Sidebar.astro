@@ -36,39 +36,37 @@ const Links = [
         name: "Theme Toggle",
         link: "/comps/themetoggle",
     },
-
 ];
-
 ---
 
 <nav
-    class="hidden  lg:block h-custom-calc w-[200px] bg-kai-100 lg:border-r-2 dark:bg-kai-bg dark:text-white top-[63px] z-[1000] fixed "
+    class="hidden lg:block h-custom-calc w-[200px] bg-kai-100 lg:border-r-2 dark:bg-kai-bg dark:text-white top-[63px] z-[1000] fixed"
 >
-    <div class="ml-[25px] flex flex-col justify-between h-full text-start p-2">
-        <div >
-            <ul class="w-fit">
-                <h3 class=""><b>Dashboard</b></h3>
-                <li>
+    <div class="ml-[13px] flex flex-col justify-between h-full text-start p-2">
+        <div>
+            <ul class="w-full">
+                <h3 class="underline mb-1.5"><b>Dashboard</b></h3>
+                <li class="border-l-2 dark:border-white border-black">
                     <a
                         href="/"
-                        class="hover:underline text-start btn block py-2 pl-3 rounded md:bg-transparen md:py-1 hover:text-kai-text"
+                        class="hover:underline text-start block p-1 px-2.5 rounded-md hover:bg-slate-300 dark:hover:bg-kai-900 ml-2 dark:text-white  md:bg-transparent focus:underline "
                         aria-current="page"
                     >
-                        Home
+                        <b> Home </b>
                     </a>
                 </li>
             </ul>
-            <ul class="w-fit">
-                <h3 class=""><b>Components</b></h3>
+            <ul class="w-full">
+                <h3 class="underline mb-1.5"><b>Components</b></h3>
 
                 {
                     Links.map((link) => (
-                        <li>
+                        <li class="border-l-2 dark:border-white border-black">
                             <a
                                 href={link.link}
-                                class="hover:underline text-start block py-1 pl-3 dark:text-white dark:hover:text-kai-text rounded md:bg-transparent focus:underline hover:text-kai-text"
+                                class="hover:underline text-start block p-1 px-2.5 rounded-md hover:bg-slate-300 dark:hover:bg-kai-900 ml-2 dark:text-white  md:bg-transparent focus:underline "
                             >
-                                {link.name}
+                                <b>{link.name}</b>
                             </a>
                         </li>
                     ))
