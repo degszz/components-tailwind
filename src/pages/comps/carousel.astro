@@ -64,60 +64,54 @@ import Caroouusel from "../../components/componentes/Carousel.astro";
                     <div class="flex flex-col justify-center my-6">
                         <Code
                             class="text-sm w-full lg:max-w-[800px] lg:min-w-[800px] p-2 border-2 rounded-md border-kai-ring dark:border-kai-950"
-                            code={`export function Carousel() {
+                            code={`<div class="h-[170px] w-full overflow-hidden flex flex-nowrap text-center" id="slider">
+    <div class="bg-kai-ring text-white space-y-4
+        flex-none w-full flex flex-col items-center justify-center">
+        <h2 class="text-4xl max-w-md underline">
+            <b>#How to use?</b>
+        </h2>
+        <p class="max-w-md">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Distinctio deserunt quam repudiandae
+         </p>
+    </div>
+    <div class="bg-kai-ring text-white space-y-4 flex-none w-full
+    flex flex-col items-center justify-center">
+        <h2 class="text-4xl max-w-md underline">
+            <b>#How to use?</b>
+        </h2>
+        <p class="max-w-md">Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Distinctio deserunt quam repudiandae
+        </p>
+    </div>
+    <div class="bg-kai-hover text-white space-y-4 flex-none 
+    w-full flex flex-col items-center justify-center">
+        <h2 class="text-4xl max-w-md underline">
+            <b>#</b>
+        </h2>
+        <p class="max-w-md">Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Minus perspiciatis quia in ullam tempore
+        esse exercitationem, soluta ipsa debitis impedit vero cum
+        laborum quidem quasi consectetur amet, at, repudiandae ea!
+        </p>
+    </div>
+</div>
+
+<script>
     document.addEventListener('DOMContentLoaded', () => {
-        const slider = document.querySelector('#slider');
-        setTimeout(function moveSlide() {
-            const max = slider.scrollWidth - slider.clientWidth;
-            const left = slider.clientWidth;
+    const slider = document.querySelector('#slider');
+    setTimeout(function moveSlide() {
+        const max = slider.scrollWidth - slider.clientWidth;
+        const left = slider.clientWidth;
 
-            if (max === slider.scrollLeft) {
-                slider.scrollTo({ left: 0, behavior: 'smooth' })
-            } else {
-                slider.scrollBy({ left, behavior: 'smooth' })
-            }
+        if (max === slider.scrollLeft) {
+            slider.scrollTo({ left: 0, behavior: 'smooth' })
+        } else {
+            slider.scrollBy({ left, behavior: 'smooth' })
+        }
 
-            setTimeout(moveSlide, 2000)
-        }, 2000)
-
-    })
-    return (
-        <>
-            <div class="h-[170px] w-full overflow-hidden flex 
-            flex-nowrap text-center" id="slider">
-                <div class="bg-kai-ring text-white space-y-4
-                flex-none w-full flex flex-col items-center justify-center">
-                    <h2 class="text-4xl max-w-md underline">
-                        <b>#How to use?</b>
-                    </h2>
-                    <p class="max-w-md">Lorem ipsum dolor sit amet consectetur
-                     adipisicing elit. Distinctio deserunt quam repudiandae
-                     </p>
-                </div>
-                <div class="bg-kai-ring text-white space-y-4 flex-none w-full
-                flex flex-col items-center justify-center">
-                    <h2 class="text-4xl max-w-md underline">
-                        <b>#How to use?</b>
-                    </h2>
-                    <p class="max-w-md">Lorem ipsum dolor sit amet consectetur
-                    adipisicing elit. Distinctio deserunt quam repudiandae
-                    </p>
-                </div>
-                <div class="bg-kai-hover text-white space-y-4 flex-none 
-                w-full flex flex-col items-center justify-center">
-                    <h2 class="text-4xl max-w-md underline">
-                        <b>#</b>
-                    </h2>
-                    <p class="max-w-md">Lorem ipsum dolor sit, amet consectetur
-                    adipisicing elit. Minus perspiciatis quia in ullam tempore
-                    esse exercitationem, soluta ipsa debitis impedit vero cum
-                    laborum quidem quasi consectetur amet, at, repudiandae ea!
-                    </p>
-                </div>
-            </div>
-        </>
-    )
-}`}
+        setTimeout(moveSlide, 2000)
+    }, 2000)})
+</script>`}
                             lang="astro"
                             theme="dark-plus"
                         />
@@ -136,23 +130,82 @@ import Caroouusel from "../../components/componentes/Carousel.astro";
                     </div>
                 </div>
                 
+                <!-- EJEMPLOS -->
+
                 <div class="mt-4">
                     <h2 class="text-2xl my-2 text-white border-b border-white">
                         Usage
                     </h2>
-                    <div class="flex flex-col justify-center my-6">
+                    <div class="text-white py-2">
+                        <h3 class="text-2xl">Html:</h3>
+                        <span>
+                            This is the HTML code to create an carousel component.
+                        </span>
+                    </div>
+                    <div class="flex flex-col justify-center mb-6">
                         <Code
                             class="text-sm w-full lg:max-w-[800px] lg:min-w-[800px] p-4 border-2 rounded-md border-kai-ring dark:border-kai-950"
-                            code={` lorem ipsum dolor sit amet consectetur adipisicing elit lorem`}
+                            code={`<div class="h-[170px] w-full overflow-hidden flex flex-nowrap text-center" id="slider">
+    <div class="bg-kai-ring text-white space-y-4
+        flex-none w-full flex flex-col items-center justify-center">
+        <h2 class="text-4xl max-w-md underline">
+            <b>#How to use?</b>
+        </h2>
+        <p class="max-w-md">Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Distinctio deserunt quam repudiandae
+         </p>
+    </div>
+    <div class="bg-kai-ring text-white space-y-4 flex-none w-full
+    flex flex-col items-center justify-center">
+        <h2 class="text-4xl max-w-md underline">
+            <b>#How to use?</b>
+        </h2>
+        <p class="max-w-md">Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Distinctio deserunt quam repudiandae
+        </p>
+    </div>
+    <div class="bg-kai-hover text-white space-y-4 flex-none 
+    w-full flex flex-col items-center justify-center">
+        <h2 class="text-4xl max-w-md underline">
+            <b>#</b>
+        </h2>
+        <p class="max-w-md">Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Minus perspiciatis quia in ullam tempore
+        esse exercitationem, soluta ipsa debitis impedit vero cum
+        laborum quidem quasi consectetur amet, at, repudiandae ea!
+        </p>
+    </div>
+</div>`}
                             lang="astro"
                             theme="dark-plus"
                         />
                     </div>
 
-                    <div class="flex flex-col justify-center my-6">
+                    <div class="text-white py-2">
+                        <h3 class="text-2xl">Script:</h3>
+                        <span>
+                            This is tooltipe to show a message with the carousel.
+                        </span>
+                    </div>
+                    <div class="flex flex-col justify-center mb-6">
                         <Code
                             class="text-sm w-full lg:max-w-[800px] lg:min-w-[800px] p-4 border-2 rounded-md border-kai-ring dark:border-kai-950"
-                            code={` lorem ipsum dolor sit amet consectetur adipisicing elit lorem`}
+                            code={`<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('#slider');
+    setTimeout(function moveSlide() {
+        const max = slider.scrollWidth - slider.clientWidth;
+        const left = slider.clientWidth;
+
+        if (max === slider.scrollLeft) {
+            slider.scrollTo({ left: 0, behavior: 'smooth' })
+        } else {
+            slider.scrollBy({ left, behavior: 'smooth' })
+        }
+
+        setTimeout(moveSlide, 2000)
+    }, 2000)})
+</script>`}
                             lang="astro"
                             theme="dark-plus"
                         />
@@ -162,18 +215,27 @@ import Caroouusel from "../../components/componentes/Carousel.astro";
                         Examples
                     </h2>
                     <div class="text-white py-2">
-                        <h3 class="text-2xl">Eso:</h3>
-                        <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil quo, accusantium</span>
+                        <h3 class="text-2xl">Usage:</h3>
+                        <span>
+                            This is how you can use the carousel component in your
+                            project astro.
+                        </span>
                     </div>
-                    <div class="flex flex-col justify-center my-6">
+                    <div class="flex flex-col justify-center mb-6">
                         <Code
                             class="text-sm w-full lg:max-w-[800px] lg:min-w-[800px] p-4 border-2 rounded-md border-kai-ring dark:border-kai-950"
-                            code={` lorem ipsum dolor sit amet consectetur adipisicing elit lorem`}
+                            code={`---
+import Carousel from "@/components/Carousel.astro";
+---
+
+<div class="lg:min-w-[800px]">
+    <Carousel/>
+</div>`}
                             lang="astro"
                             theme="dark-plus"
                         />
                     </div>
-                </div>
+                    
             </div>
         </div>
     </div>
