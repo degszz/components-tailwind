@@ -50,7 +50,7 @@ export class CopyCodeButton extends LitElement {
     // check if the browser supports clipboard API
     if (!navigator.clipboard) {
       // if not use the old commandExec() way
-      document.execCommand('copy');
+      document.commandExec('copy');
     } else {
       try {
         navigator.clipboard.writeText(range.toString());
