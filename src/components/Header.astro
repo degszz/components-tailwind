@@ -10,20 +10,19 @@ import ThemeToggle from "./ThemeToggle.astro";
         class="flex pl-5 lg:min-w-[190px] items-center justify-center w-fit text-center h-full lg:w-[200px]"
     >
         <Menu />
-        <div class="hidden underline lg:block dark:text-white text-xl text-start w-full font-sans">
-            <span>Design System</span>
+        <div
+            class="hidden underline lg:block dark:text-white text-xl text-start w-full font-sans"
+        >
+            <a
+                href="/"
+                class=""
+            >
+                <p class="scale-100 duration-200 hover:scale-110 hover:cursor-pointer">Design System</p>
+            </a>
         </div>
     </div>
-    <div class="flex w-full h-full justify-center items-center ">
-        
-        
-
-    </div>
-    <div
-        class="flex pr-5 items-center justify-around text-center h-full"
-    >
+    <div class="flex w-full h-full justify-center items-center"></div>
+    <div class="flex pr-5 items-center justify-around text-center h-full">
         <ThemeToggle />
     </div>
 </header>
-
-
